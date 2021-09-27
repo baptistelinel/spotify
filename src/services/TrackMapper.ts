@@ -1,11 +1,8 @@
-import { Track } from '../types/Track';
+import { TrackType } from "../types/TrackType";
+import { ApiTrackType } from "../types/ApiTrackType";
 
-export interface ApiTrack {
-    name: string;
-};
-
-export const mapTrackFromApi = (apiTrack: ApiTrack): Track => {
-    return {
-        name: apiTrack.name,
-    };
+export const mapTrackFromApi = (apiTrack: ApiTrackType): TrackType => {
+  return {
+    name: apiTrack.name,
+  };
 };
