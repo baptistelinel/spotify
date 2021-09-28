@@ -11,9 +11,10 @@ const Self: React.FC<{}> = () => {
         <Loader />
       ) : (
         selfTracks.map((track) => {
-          return <Track key={track.name} {...track} />;
+          return <Track key={track.id} {...track} />;
         })
       )}
+      <h2>Liked tracks : {selfTracks.length}</h2>
     </>
   );
 };

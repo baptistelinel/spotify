@@ -4,5 +4,6 @@ import { ApiTrackType } from "../types/ApiTrackType";
 export const mapTrackFromApi = (apiTrack: ApiTrackType): TrackType => {
   return {
     name: apiTrack.name,
+    id: apiTrack.id,
   };
 };

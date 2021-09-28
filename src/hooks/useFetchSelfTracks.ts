@@ -23,9 +23,6 @@ export const useFetchSelfTracks = () => {
       const tracks = response.body.items.map(({ track }) => {
         return mapTrackFromApi(track);
       });
-      response.body.items.forEach(({ track }) => {
-        tracks.push(mapTrackFromApi(track));
-      });
       setSelfTracks(tracks);
       setDisplayLoader(false);
     };
