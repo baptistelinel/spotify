@@ -1,10 +1,8 @@
-import './App.css';
-import Home from './pages/Home';
+import "./App.css";
+import Self from "./pages/Self";
 
 function App() {
-  return (
-      <Home />
-  );
+  return <Self />;
 }
 
 export default App;
