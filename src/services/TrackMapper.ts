@@ -5,6 +5,7 @@ export const mapTrackFromApi = (apiTrack: ApiTrackType): TrackType => {
   return {
     name: apiTrack.name,
     id: apiTrack.id,
+    previewUrl: apiTrack.preview_url,
     duration: apiTrack.duration_ms,
     artists: apiTrack.artists.map((artist) => {
       return { id: artist.id, name: artist.name };

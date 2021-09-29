@@ -1,6 +1,6 @@
-import Track from "../components/Track";
 import { useFetchSelfTracks } from "../hooks/useFetchSelfTracks";
 import Loader from "../components/Loader";
+import Grid from "../components/Grid";
 
 const Self: React.FC<{}> = () => {
   const { selfTracks, displayLoader } = useFetchSelfTracks();
@@ -8,13 +8,7 @@ const Self: React.FC<{}> = () => {
 
   return (
     <>
-      {displayLoader ? (
-        <Loader />
-      ) : (
-        selfTracks.map((track) => {
-          return <Track key={track.id} {...track} />;
-        })
-      )}
+      {displayLoader ? <Loader /> : <Grid tracks={selfTracks} />}
       <h2>Liked tracks : {selfTracks.length}</h2>
     </>
   );

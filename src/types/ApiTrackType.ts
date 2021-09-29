@@ -17,4 +17,5 @@ export interface ApiTrackType {
   duration_ms: number;
   artists: ArtistType[];
   album: AlbumType;
+  preview_url: string;
 }

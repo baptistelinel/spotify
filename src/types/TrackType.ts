@@ -17,4 +17,5 @@ export interface TrackType {
   duration: number;
   artists: ArtistType[];
   album: AlbumType;
+  previewUrl: string;
 }
