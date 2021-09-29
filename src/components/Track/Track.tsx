@@ -22,10 +22,12 @@ const Track: React.FC<TrackType> = ({
           {artists.map((artist) => artist.name)} - {name}
         </Card.Title>
         <Card.Text>{msToMinutesAndSecondes(duration)}</Card.Text>
+      </Card.Body>
+      <Card.Footer>
         <audio controls style={{ width: "260px" }}>
           <source src={previewUrl} type="audio/mpeg" />
         </audio>
-      </Card.Body>
+      </Card.Footer>
     </Card>
   );
 };
