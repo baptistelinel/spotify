@@ -1,6 +1,6 @@
 import { TrackType } from "../../types/TrackType";
 
-const Track: React.FC<TrackType> = ({ name, id, artists, duration }) => {
+const Track: React.FC<TrackType> = ({ name, id, artists, duration, album }) => {
   function msToMinutesAndSecondes(ms: number): string {
     const minutes = Math.floor(ms / 60000);
     const seconds = ((ms % 60000) / 1000).toFixed(0);
@@ -20,6 +20,13 @@ const Track: React.FC<TrackType> = ({ name, id, artists, duration }) => {
         {artists.map((artist) => (
           <li key={artist.id}>Name : {artist.name}</li>
         ))}
+      </ul>
+      <h2>Album</h2>
+      <img src={album.cover} alt="Album cover" />
+      <ul>
+        <li>Name: {album.name}</li>
+        <li>Release Date: {album.releaseDate}</li>
+        <li>Total tracks: {album.totalTracks}</li>
       </ul>
     </>
   );

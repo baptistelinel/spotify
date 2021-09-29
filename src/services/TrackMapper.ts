@@ -1,6 +1,5 @@
 import { TrackType } from "../types/TrackType";
 import { ApiTrackType } from "../types/ApiTrackType";
-import Artist from "../components/Artist";
 
 export const mapTrackFromApi = (apiTrack: ApiTrackType): TrackType => {
   return {
@@ -10,5 +9,12 @@ export const mapTrackFromApi = (apiTrack: ApiTrackType): TrackType => {
     artists: apiTrack.artists.map((artist) => {
       return { id: artist.id, name: artist.name };
     }),
+    album: {
+      id: apiTrack.album.id,
+      name: apiTrack.album.name,
+      releaseDate: apiTrack.album.release_date,
+      totalTracks: apiTrack.album.total_tracks,
+      cover: apiTrack.album.images[1].url,
+    },
   };
 };

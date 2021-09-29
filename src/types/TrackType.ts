@@ -1,11 +1,20 @@
-interface Artist {
+interface ArtistType {
   name: string;
   id: string;
+}
+
+interface AlbumType {
+  id: string;
+  name: string;
+  releaseDate: string;
+  totalTracks: number;
+  cover: string;
 }
 
 export interface TrackType {
   name: string;
   id: string;
   duration: number;
-  artists: Artist[];
+  artists: ArtistType[];
+  album: AlbumType;
 }
