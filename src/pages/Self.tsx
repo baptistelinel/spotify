@@ -4,6 +4,7 @@ import Loader from "../components/Loader";
 
 const Self: React.FC<{}> = () => {
   const { selfTracks, displayLoader } = useFetchSelfTracks();
+  console.log(selfTracks);
 
   return (
     <>

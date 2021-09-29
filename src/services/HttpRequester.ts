@@ -6,7 +6,7 @@ const apiSpotifyUrl = "https://api.spotify.com/v1";
 // Client secret = b601ea2dc98e488288a503542327c35c
 
 const authApiToken =
-  "BQDyJGmOrDiTWMUSZRX3wb_wbh0YparwQBq_MCBabyZZ_jPKz4JoDrZR1ka8MOrZwelLcfsRCM6zWIyZTrthz96ZoBciZlH15LwUts4iWr1dgzpIHajSSvieGBJuVTgva6vO3xIR4AhORtOctaZJZT2ifkehbxK5-Ke2TNGpsv7-SN-I";
+  "BQCAYEJhNUV-rWpyRbJV86OyDMx_4-Jo6rZqDebG-e49tnvM_IGakNfw3luwvSnYGRc8ED-iUG7OnuWN2iVqUjXkE8MWOmd5eLv_6fB7RigyRGIeNxBXEsXUismTGbItrpUCLTLErIU7hBM4_jAi6EQCzDcJQPCwOsm1501gb5TBaiyA";
 
 export const httpGet = (endpoint: string) => {
   return request

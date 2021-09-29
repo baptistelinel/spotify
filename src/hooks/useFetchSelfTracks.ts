@@ -20,6 +20,7 @@ export const useFetchSelfTracks = () => {
   useEffect(() => {
     const handleFetchSelfTracks = async () => {
       const response: ApiResponse = await getSelfTracks();
+      console.log(response.body);
       const tracks = response.body.items.map(({ track }) => {
         return mapTrackFromApi(track);
       });
